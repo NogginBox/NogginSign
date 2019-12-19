@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nogginsign.net", "nogginsign.net\nogginsign.net.csproj", "{2258FC03-3746-4DAB-8A40-2102DF3D7688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NogginSign.net", "NogginSign.net\NogginSign.net.csproj", "{2258FC03-3746-4DAB-8A40-2102DF3D7688}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution files", "Solution files", "{4469504B-DBDD-4053-9519-74D5A23EA70C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python files", "Python files", "{EAC910C7-2EBD-4488-B2EC-D4FB892C9A25}"
+	ProjectSection(SolutionItems) = preProject
+		alphasign\__init__.py = alphasign\__init__.py
+		alphasign\charsets.py = alphasign\charsets.py
+		alphasign\constants.py = alphasign\constants.py
+		alphasign\counters.py = alphasign\counters.py
+		alphasign\date.py = alphasign\date.py
+		alphasign\devices.py = alphasign\devices.py
+		alphasign\extchars.py = alphasign\extchars.py
+		alphasign\modes.py = alphasign\modes.py
+		alphasign\packet.py = alphasign\packet.py
+		alphasign\positions.py = alphasign\positions.py
+		alphasign\speeds.py = alphasign\speeds.py
+		alphasign\string.py = alphasign\string.py
+		alphasign\text.py = alphasign\text.py
+		alphasign\time.py = alphasign\time.py
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
