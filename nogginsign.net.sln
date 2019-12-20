@@ -15,7 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python files", "Python file
 	ProjectSection(SolutionItems) = preProject
 		alphasign\__init__.py = alphasign\__init__.py
 		alphasign\charsets.py = alphasign\charsets.py
-		alphasign\constants.py = alphasign\constants.py
 		alphasign\counters.py = alphasign\counters.py
 		alphasign\date.py = alphasign\date.py
 		alphasign\devices.py = alphasign\devices.py
