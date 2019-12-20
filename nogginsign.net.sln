@@ -14,10 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python files", "Python files", "{EAC910C7-2EBD-4488-B2EC-D4FB892C9A25}"
 	ProjectSection(SolutionItems) = preProject
 		alphasign\__init__.py = alphasign\__init__.py
-		alphasign\charsets.py = alphasign\charsets.py
 		alphasign\date.py = alphasign\date.py
-		alphasign\devices.py = alphasign\devices.py
-		alphasign\extchars.py = alphasign\extchars.py
 		alphasign\modes.py = alphasign\modes.py
 		alphasign\packet.py = alphasign\packet.py
 		alphasign\positions.py = alphasign\positions.py
