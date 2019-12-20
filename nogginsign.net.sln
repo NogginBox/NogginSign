@@ -16,7 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python files", "Python file
 		alphasign\__init__.py = alphasign\__init__.py
 		alphasign\date.py = alphasign\date.py
 		alphasign\packet.py = alphasign\packet.py
-		alphasign\speeds.py = alphasign\speeds.py
 		alphasign\string.py = alphasign\string.py
 		alphasign\text.py = alphasign\text.py
 		alphasign\time.py = alphasign\time.py
