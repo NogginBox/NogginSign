@@ -15,16 +15,19 @@ namespace NogginSign.net
 
         public string Position { get; }
 
+        public string Text { get; }
+
         private readonly Packet _packet;
 
-        public SignText(string data, string label = "A", string position = Positions.MIDDLE_LINE, string mode = Modes.ROTATE, bool priority = false)
+        public SignText(string text, string label = "A", string position = Positions.MIDDLE_LINE, string mode = Modes.ROTATE, bool priority = false)
         {
             Label = label;
             Mode = mode;
             Position = position;
+            Text = text;
 
-            var content = data != null
-                ? $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}{PacketConstants.ESC}{position}{Mode}{data}"
+            var content = Text != null
+                ? $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}{PacketConstants.ESC}{position}{Mode}{Text}"
                 : $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}";
             _packet = new Packet(content);
         }

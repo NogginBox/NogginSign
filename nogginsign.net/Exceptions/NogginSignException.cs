@@ -19,5 +19,7 @@ namespace nogginsign.net.Exceptions
         public NogginSignConnectionException() : base() {}
 
         public NogginSignConnectionException(string msg) : base(msg) {}
+
+        public NogginSignConnectionException(string msg, Exception ex) : base(msg, ex) { }
     }
 }
