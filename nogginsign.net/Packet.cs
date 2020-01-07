@@ -27,11 +27,7 @@ namespace NogginSign.net
 
         public override string ToString()
         {
-            return $"{PacketConstants.NUL.Repeat(5)}{PacketConstants.SOH}{Type}{Address}{PacketConstants.STX}{_contents}{PacketConstants.EOT}";
-            /*("%s%s%s%s%s%s%s" %
-                 (constants.NUL* 5, constants.SOH, self.type,
-                  self.address, constants.STX, contents,
-                  constants.EOT))*/
+            return $"{PacketConstants.SOH}{Type}{Address}{PacketConstants.STX}{_contents}{PacketConstants.EOT}";
         }
 
     }

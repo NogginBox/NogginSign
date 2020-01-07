@@ -5,11 +5,10 @@
     /// </summary>
     public static class PacketConstants
     {
-        public const string NUL     = "\x00";  // NULL
-        public const string SOH     = "\x01";  // Start of Header
-        public const string STX     = "\x02";  // Start of TeXt (precedes a command code)
-        public const string ETX     = "\x03";  // End of TeXt
-        public const string EOT     = "\x04";  // End Of Transmission
+        public const string SOH     = "_01";  // Start of Header
+        public const string STX     = "_02";  // Start of TeXt (precedes a command code)
+        public const string ETX     = "_03";  // End of TeXt
+        public const string EOT     = "_04";  // End Of Transmission
         //public const string #ENQ    = "\x05"  # Enquiry
         //public const string #ACK    = "\x06"  # Acknowledge
         public const string BEL     = "\x07";  // Bell

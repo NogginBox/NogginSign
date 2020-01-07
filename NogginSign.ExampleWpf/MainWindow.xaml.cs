@@ -40,7 +40,7 @@ namespace NogginSign.ExampleWpf
             var text = String.IsNullOrWhiteSpace(SignText.Text)
                 ? "Banana"
                 : SignText.Text;
-            var command = new SignText(text);
+            var command = new SignText(text, priority: true);
             _sign.Send(command);
         }
     }

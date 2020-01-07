@@ -1,4 +1,4 @@
-﻿using nogginsign.net.Exceptions;
+using nogginsign.net.Exceptions;
 using System;
 using System.Diagnostics.Contracts;
 using System.IO.Ports;
@@ -52,9 +52,9 @@ namespace NogginSign.net
                 _port.Open();
             }
             var commandText = command.ToString();
-            //_port.Write(commandText);
+            _port.Write(commandText);
 
-            _port.Write($"_01Z00_02A0{command.Text}_04");
+            //_port.Write($"_01Z00_02A0{command.Text}_04");
         }
     }
 }
