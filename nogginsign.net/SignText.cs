@@ -19,7 +19,7 @@ namespace NogginSign.net
 
         private readonly Packet _packet;
 
-        public SignText(string text, string label = "A", string position = Positions.FILL, string mode = Modes.ROTATE, bool priority = false)
+        public SignText(string text, string label = "A", string position = Positions.Fill, string mode = Modes.Rotate, bool priority = false)
         {
             Label = label;
             Mode = mode;

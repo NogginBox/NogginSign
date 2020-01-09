@@ -1,28 +1,28 @@
 ﻿namespace NogginSign.net.Constants
 {
-    class Modes
+    public static class Modes
     {
         // Normal display modes
-        public const string ROTATE            = "a";
-        public const string HOLD              = "b";
-        public const string FLASH             = "c";
-        public const string ROLL_UP           = "e";
-        public const string ROLL_DOWN         = "f";
-        public const string ROLL_LEFT         = "g";
-        public const string ROLL_RIGHT        = "h";
-        public const string WIPE_UP           = "i";
-        public const string WIPE_DOWN         = "j";
-        public const string WIPE_LEFT         = "k";
-        public const string WIPE_RIGHT        = "l";
-        public const string SCROLL            = "m";
-        public const string AUTOMODE          = "o";
-        public const string ROLL_IN           = "p";
-        public const string ROLL_OUT          = "q";
-        public const string WIPE_IN           = "r";
-        public const string WIPE_OUT          = "s";
-        public const string COMPRESSED_ROTATE = "t";
-        public const string EXPLODE           = "u";
-        public const string CLOCK             = "v";
+        public const string Rotate            = "a";
+        public const string Hold              = "b";
+        public const string Flash             = "c";
+        public const string RollUp           = "e";
+        public const string RollDown         = "f";
+        public const string RollLeft         = "g";
+        public const string RollRight        = "h";
+        public const string WipeUp           = "i";
+        public const string WipeDown         = "j";
+        public const string WipeLeft         = "k";
+        public const string WipeRight        = "l";
+        public const string Scroll            = "m";
+        public const string AutoMode          = "o";
+        public const string RollIn           = "p";
+        public const string RollOut          = "q";
+        public const string WipeIn           = "r";
+        public const string WipeOut          = "s";
+        public const string CompressedRotate = "t";
+        public const string Explode           = "u";
+        public const string Clock             = "v";
 
         // Special modes
         public const string TWINKLE           = "n0";

@@ -9,6 +9,37 @@
     <StackPanel>
         <TextBlock>NogginSign Example</TextBlock>
         <TextBox x:Name="SignText" FontSize="24" FontFamily="Courier New" FontWeight="Bold">What would you like to say</TextBox>
+        <ComboBox x:Name="TextPosition" Text="Select position">
+            <ComboBoxItem>Middle Line</ComboBoxItem>
+            <ComboBoxItem>Top Line</ComboBoxItem>
+            <ComboBoxItem>Bottom Line</ComboBoxItem>
+            <ComboBoxItem>Fill</ComboBoxItem>
+            <ComboBoxItem>Left</ComboBoxItem>
+            <ComboBoxItem>Right</ComboBoxItem>
+        </ComboBox>
+    
+        <ComboBox Name="TextMode">
+            <ComboBoxItem>Rotate</ComboBoxItem>
+            <ComboBoxItem>Hold</ComboBoxItem>
+            <ComboBoxItem>Flash</ComboBoxItem>
+            <ComboBoxItem>Roll Up</ComboBoxItem>
+            <ComboBoxItem>Roll Down</ComboBoxItem>
+            <ComboBoxItem>Roll Left</ComboBoxItem>
+            <ComboBoxItem>Roll Right</ComboBoxItem>
+            <ComboBoxItem>Wipe Up</ComboBoxItem>        
+            <ComboBoxItem>Wipe Down</ComboBoxItem>       
+            <ComboBoxItem>Wipe Left</ComboBoxItem>      
+            <ComboBoxItem>Wipe Right</ComboBoxItem>
+            <ComboBoxItem>Scroll</ComboBoxItem>
+            <ComboBoxItem>Auto Mode</ComboBoxItem>   
+            <ComboBoxItem>Roll In</ComboBoxItem>      
+            <ComboBoxItem>Roll Out</ComboBoxItem>    
+            <ComboBoxItem>Wipe In</ComboBoxItem>    
+            <ComboBoxItem>Wipe Out</ComboBoxItem>
+            <ComboBoxItem>Compressed Rotate</ComboBoxItem>
+            <ComboBoxItem>Explode</ComboBoxItem>
+            <ComboBoxItem>Clock</ComboBoxItem>
+        </ComboBox>
         <Button Click="OnSend" FontSize="20" FontWeight="Bold">Send</Button>
     </StackPanel>
 </Window>
