@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NogginSign.net", "NogginSig
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution files", "Solution files", "{4469504B-DBDD-4053-9519-74D5A23EA70C}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
@@ -27,7 +28,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "interfaces", "interfaces", 
 		alphasign\interfaces\local.py = alphasign\interfaces\local.py
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NogginSign.ExampleWpf", "NogginSign.ExampleWpf\NogginSign.ExampleWpf.csproj", "{FBB2E72D-9BC1-453B-BA96-D692458B9D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NogginSign.ExampleWpf", "NogginSign.ExampleWpf\NogginSign.ExampleWpf.csproj", "{FBB2E72D-9BC1-453B-BA96-D692458B9D8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D70A32AB-0206-41A7-BEE6-79C898A0A646}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

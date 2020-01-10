@@ -12,14 +12,14 @@ namespace NogginSign.ExampleWpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly Sign _sign;
+        private readonly ISign _sign;
 
         public MainWindow()
         {
             InitializeComponent();
 
             //TextPosition.ItemsSource = 
-            _sign = new Sign();
+            _sign = new FakeSign();
         }
 
 
@@ -37,44 +37,45 @@ namespace NogginSign.ExampleWpf
             var p = ((ComboBoxItem)TextPosition.SelectedItem)?.Content;
             var position = p switch
             {
-                "Middle Line" => Positions.MiddleLine,
-                "Bottom Line" => Positions.BottomLine,
-                "Left" => Positions.Left,
-                "Top Line" => Positions.TopLine,
-                "Right" => Positions.Right,
-                "Fill" => Positions.Fill,
-                _ => Positions.Fill
+                "Middle Line" => Position.MiddleLine,
+                "Bottom Line" => Position.BottomLine,
+                "Left" => Position.Left,
+                "Top Line" => Position.TopLine,
+                "Right" => Position.Right,
+                "Fill" => Position.Fill,
+                _ => Position.Fill
             };
 
             var m = ((ComboBoxItem)TextMode.SelectedItem)?.Content;
             var mode = m switch
             {
-                "Rotate" => Modes.Rotate,
-                "Hold" => Modes.Hold,
-                "Flash" => Modes.Flash,
-                "Roll Up" => Modes.RollUp,
-                "Roll Down" => Modes.RollDown,
-                "Roll Left" => Modes.RollLeft,
-                "Roll Right" => Modes.RollRight,
-                "Wipe Up" => Modes.WipeUp,
-                "Wipe Down" => Modes.WipeDown,
-                "Wipe Left" => Modes.WipeLeft,
-                "Wipe Right" => Modes.WipeRight,
-                "Scroll" => Modes.Scroll,
-                "Auto Mode" => Modes.AutoMode,
-                "Roll In" => Modes.RollIn,
-                "Roll Out" => Modes.RollOut,
-                "Wipe In" => Modes.WipeIn,
-                "Wipe Out" => Modes.WipeOut,
-                "Compressed Rotate" => Modes.CompressedRotate,
-                "Explode" => Modes.Explode,
-                "Clock" => Modes.Clock,
-                _ => Modes.Flash
-            };
+                "Rotate" => Mode.NormalRotate,
+                "Hold" => Mode.NormalHold,
+                "Flash" => Mode.NormalFlash,
+                "Roll Up" => Mode.NormalRollUp,
+                "Roll Down" => Mode.NormalRollDown,
+                "Roll Left" => Mode.NormalRollLeft,
+                "Roll Right" => Mode.NormalRollRight,
+                "Wipe Up" => Mode.NormalWipeUp,
+                "Wipe Down" => Mode.NormalWipeDown,
+                "Wipe Left" => Mode.NormalWipeLeft,
+                "Wipe Right" => Mode.NormalWipeRight,
+                "Scroll" => Mode.NormalScroll,
+                "Auto Mode" => Mode.NormalAutoMode,
+                "Roll In" => Mode.NormalRollIn,
+                "Roll Out" => Mode.NormalRollOut,
+                "Wipe In" => Mode.NormalWipeIn,
+                "Wipe Out" => Mode.NormalWipeOut,
+                "Compressed Rotate" => Mode.NormalCompressedRotate,
+                "Explode" => Mode.NormalExplode,
+                "Clock" => Mode.NormalClock,
+                _ => Mode.NormalAutoMode
+			};
 
 
             var command = new SignText(text, position: position, mode: mode, priority: true);
-            _sign.Send(command);
+            var signOutput = _sign.Send(command);
+			Console.WriteLine($"Sign command: {signOutput}");
         }
     }
 }
