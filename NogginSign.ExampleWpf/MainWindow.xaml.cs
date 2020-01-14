@@ -1,4 +1,5 @@
-﻿using NogginSign.net;
+﻿using EnumsNET;
+using NogginSign.net;
 using NogginSign.net.Constants;
 using System;
 using System.Linq;
@@ -18,8 +19,12 @@ namespace NogginSign.ExampleWpf
         {
             InitializeComponent();
 
-            //TextPosition.ItemsSource = 
-            _sign = new FakeSign();
+			TextPosition.ItemsSource = Enums.GetValues<Position>().Select(p => new Item<Position>(p.AsString(EnumFormat.Description), p)).ToList();
+			//TextPosition.DisplayMemberPath = "Name";
+
+			TextMode.ItemsSource = Enums.GetValues<Mode>().Select(p => new Item<Mode>(p.AsString(EnumFormat.Description), p)).ToList();
+
+			_sign = new Sign();// FakeSign();
         }
 
 
@@ -34,43 +39,12 @@ namespace NogginSign.ExampleWpf
                 ? "Banana"
                 : SignText.Text;
 
-            var p = ((ComboBoxItem)TextPosition.SelectedItem)?.Content;
-            var position = p switch
-            {
-                "Middle Line" => Position.MiddleLine,
-                "Bottom Line" => Position.BottomLine,
-                "Left" => Position.Left,
-                "Top Line" => Position.TopLine,
-                "Right" => Position.Right,
-                "Fill" => Position.Fill,
-                _ => Position.Fill
-            };
+            var position = (TextPosition.SelectedItem as Item<Position>)?.Value
+				?? Position.Fill;
 
-            var m = ((ComboBoxItem)TextMode.SelectedItem)?.Content;
-            var mode = m switch
-            {
-                "Rotate" => Mode.NormalRotate,
-                "Hold" => Mode.NormalHold,
-                "Flash" => Mode.NormalFlash,
-                "Roll Up" => Mode.NormalRollUp,
-                "Roll Down" => Mode.NormalRollDown,
-                "Roll Left" => Mode.NormalRollLeft,
-                "Roll Right" => Mode.NormalRollRight,
-                "Wipe Up" => Mode.NormalWipeUp,
-                "Wipe Down" => Mode.NormalWipeDown,
-                "Wipe Left" => Mode.NormalWipeLeft,
-                "Wipe Right" => Mode.NormalWipeRight,
-                "Scroll" => Mode.NormalScroll,
-                "Auto Mode" => Mode.NormalAutoMode,
-                "Roll In" => Mode.NormalRollIn,
-                "Roll Out" => Mode.NormalRollOut,
-                "Wipe In" => Mode.NormalWipeIn,
-                "Wipe Out" => Mode.NormalWipeOut,
-                "Compressed Rotate" => Mode.NormalCompressedRotate,
-                "Explode" => Mode.NormalExplode,
-                "Clock" => Mode.NormalClock,
-                _ => Mode.NormalAutoMode
-			};
+
+            var mode = (TextMode.SelectedItem as Item<Mode>)?.Value
+				?? Mode.NormalAutoMode;
 
 
             var command = new SignText(text, position: position, mode: mode, priority: true);
