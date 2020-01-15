@@ -1,4 +1,4 @@
-﻿namespace NogginSign.net.Constants
+﻿namespace NogginSign.Constants
 {
     /// <summary>
     /// Change the speed of the text (1 slowest, 5 fastest)

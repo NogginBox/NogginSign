@@ -1,6 +1,6 @@
-# NogginSign.NET
+# NogginSign
 
-NogginSign.NET will be a .NET Standard library for
+NogginSign will be a .NET Standard library for
 [Alpha American](http://www.alpha-american.com/) LED signs, such as the
 [Betabrite](http://www.betabrite.com/). It implements the
 [Alpha Communications Protocol](http://www.alpha-american.com/p-alpha-communications-protocol.html).

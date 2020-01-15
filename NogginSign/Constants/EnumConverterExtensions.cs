@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NogginSign.net.Constants
+namespace NogginSign.Constants
 {
 	internal static class EnumConverterExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace NogginSign.net.Constants
+namespace NogginSign.Constants
 {
     public enum Mode
     {

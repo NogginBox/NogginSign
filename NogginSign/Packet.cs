@@ -1,6 +1,6 @@
-﻿using NogginSign.net.Constants;
+﻿using NogginSign.Constants;
 
-namespace NogginSign.net
+namespace NogginSign
 {
     /// <summary>
     /// Container for data to be sent to a sign device.

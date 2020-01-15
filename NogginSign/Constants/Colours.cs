@@ -1,7 +1,7 @@
-﻿using nogginsign.net.Exceptions;
+﻿using NogginSign.Exceptions;
 using System.Text.RegularExpressions;
 
-namespace nogginsign.net.Constants
+namespace NogginSign.Constants
 {
     class Colours
     {

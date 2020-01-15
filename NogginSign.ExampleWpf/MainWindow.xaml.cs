@@ -1,6 +1,6 @@
 ﻿using EnumsNET;
-using NogginSign.net;
-using NogginSign.net.Constants;
+using NogginSign;
+using NogginSign.Constants;
 using System;
 using System.Linq;
 using System.Windows;

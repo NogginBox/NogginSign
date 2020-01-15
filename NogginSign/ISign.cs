@@ -1,4 +1,4 @@
-﻿namespace NogginSign.net
+﻿namespace NogginSign
 {
 	public interface ISign
 	{

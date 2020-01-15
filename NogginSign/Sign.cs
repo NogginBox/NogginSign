@@ -1,9 +1,9 @@
-﻿using nogginsign.net.Exceptions;
+﻿using NogginSign.Exceptions;
 using System;
 using System.Diagnostics.Contracts;
 using System.IO.Ports;
 
-namespace NogginSign.net
+namespace NogginSign
 {
 	public class Sign : ISign
 	{

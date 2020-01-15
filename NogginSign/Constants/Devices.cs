@@ -1,4 +1,4 @@
-﻿namespace NogginSign.net.Constants
+﻿namespace NogginSign.Constants
 {
     /// <summary>
     /// Device constants are used during instantiation of interface classes (such as

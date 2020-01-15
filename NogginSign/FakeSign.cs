@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.Contracts;
 
-namespace NogginSign.net
+namespace NogginSign
 {
 	/// <summary>
 	/// A simple implementation of ISign that will just let you know the command codes generated without a real connected sign.

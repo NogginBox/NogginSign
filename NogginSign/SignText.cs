@@ -1,8 +1,39 @@
-﻿namespace NogginSign.net
+﻿using NogginSign.Constants;
+
+namespace NogginSign
 {
-	public interface ISignCommand
+	public class SignText : ISignCommand
     {
-        string ToString();
+        public string Label { get; }
+
+        public Mode Mode { get; }
+
+        public Position Position { get; }
+
+        public string Text { get; }
+
+        private readonly Packet _packet;
+
+        public SignText(string text, string label = "A", Position position = Position.Fill, Mode mode = Mode.NormalAutoMode, bool priority = false)
+        {
+            Label = label;
+            Mode = mode;
+            Position = position;
+            Text = text;
+
+            var modeField = $"{PacketConstants.ESC}{position.ToCode()}{Mode.ToCode()}";
+
+            var content = Text != null
+                ? $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}{modeField}{Text}"
+                : $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}";
+            _packet = new Packet(content);
+        }
+
+        public override string ToString()
+        {
+            return _packet.ToString();
+        }
+
     }
 }
 

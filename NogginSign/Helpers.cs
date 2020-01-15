@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace NogginSign.net
+namespace NogginSign
 {
     internal static class Helpers
     {

@@ -1,4 +1,4 @@
-﻿namespace NogginSign.net.Constants
+﻿namespace NogginSign.Constants
 {
     /// <summary>
     /// Constants used in transmission packets
