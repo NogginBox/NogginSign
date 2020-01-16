@@ -1,4 +1,6 @@
-﻿namespace NogginSign
+﻿using NogginSign.Commands;
+
+namespace NogginSign
 {
 	public interface ISign
 	{

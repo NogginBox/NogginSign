@@ -1,17 +1,16 @@
-﻿using EnumsNET;
-using NogginSign;
-using NogginSign.Constants;
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
+using EnumsNET;
+using NogginSign.Commands;
+using NogginSign.Constants;
 
 namespace NogginSign.ExampleWpf
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window
     {
         private readonly ISign _sign;
 
@@ -47,7 +46,7 @@ namespace NogginSign.ExampleWpf
 				?? Mode.NormalAutoMode;
 
 
-            var command = new SignText(text, position: position, mode: mode, priority: true);
+            var command = new TextCommand(text, position: position, mode: mode, priority: true);
             var signOutput = _sign.Send(command);
 			Console.WriteLine($"Sign command: {signOutput}");
         }

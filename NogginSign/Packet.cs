@@ -25,7 +25,7 @@ namespace NogginSign
         /// </summary>
         public string Type { get; set; } = "Z";
 
-        public override string ToString()
+        public string ToCode()
         {
             return $"{PacketConstants.SOH}{Type}{Address}{PacketConstants.STX}{_contents}{PacketConstants.EOT}";
         }

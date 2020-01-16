@@ -1,8 +1,8 @@
 ﻿using NogginSign.Constants;
 
-namespace NogginSign
+namespace NogginSign.Commands
 {
-	public class SignText : ISignCommand
+	public class TextCommand : ISignCommand
     {
         public string Label { get; }
 
@@ -14,7 +14,7 @@ namespace NogginSign
 
         private readonly Packet _packet;
 
-        public SignText(string text, string label = "A", Position position = Position.Fill, Mode mode = Mode.NormalAutoMode, bool priority = false)
+        public TextCommand(string text, string label = "A", Position position = Position.Fill, Mode mode = Mode.NormalAutoMode, bool priority = false)
         {
             Label = label;
             Mode = mode;
@@ -29,9 +29,9 @@ namespace NogginSign
             _packet = new Packet(content);
         }
 
-        public override string ToString()
+        public string ToCode()
         {
-            return _packet.ToString();
+            return _packet.ToCode();
         }
 
     }

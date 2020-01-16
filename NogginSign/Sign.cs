@@ -1,4 +1,5 @@
-﻿using NogginSign.Exceptions;
+using NogginSign.Commands;
+using NogginSign.Exceptions;
 using System;
 using System.Diagnostics.Contracts;
 using System.IO.Ports;
@@ -54,7 +55,7 @@ namespace NogginSign
 				_port.Open();
 			}
 
-			var commandText = command.ToString();
+			var commandText = command.ToCode();
 			_port.Write(commandText);
 
 			return commandText;

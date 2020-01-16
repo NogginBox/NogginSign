@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Contracts;
+using NogginSign.Commands;
 
 namespace NogginSign
 {
@@ -16,7 +17,7 @@ namespace NogginSign
 		public string Send(ISignCommand command)
 		{
 			Contract.Requires(command != null);
-			var commandText = command.ToString();
+			var commandText = command.ToCode();
 			return commandText;
 		}
 	}
