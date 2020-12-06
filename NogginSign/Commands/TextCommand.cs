@@ -1,4 +1,5 @@
-﻿using NogginSign.Constants;
+﻿using System.Text.RegularExpressions;
+using NogginSign.Constants;
 
 namespace NogginSign.Commands
 {
@@ -6,28 +7,37 @@ namespace NogginSign.Commands
     {
         public string Label { get; }
 
-        public Mode Mode { get; }
+        public Mode? Mode { get; }
 
-        public Position Position { get; }
+        public Position? Position { get; }
 
         public string Text { get; }
 
         private readonly Packet _packet;
 
-        public TextCommand(string text, string label = "A", Position position = Position.Fill, Mode mode = Mode.NormalAutoMode, bool priority = false)
+        public TextCommand(string text, string label = "A", Position? position = null, Mode? mode = null, bool priority = false)
         {
             Label = label;
             Mode = mode;
             Position = position;
             Text = text;
 
-            var modeField = $"{PacketConstants.ESC}{position.ToCode()}{Mode.ToCode()}";
+			var modeField = Position.HasValue && Mode.HasValue
+				? $"{PacketConstants.ESC}{position?.ToCode()}{Mode?.ToCode()}"
+				: null;
+			var textField = Parse(Text);
 
             var content = Text != null
-                ? $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}{modeField}{Text}"
+                ? $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}{modeField}{textField}"
                 : $"{CommandCodes.WRITE_TEXT}{(priority ? "0" : Label)}";
             _packet = new Packet(content);
         }
+
+		private string Parse(string text)
+		{
+			text = Regex.Replace(text, @"\|c:(?<colour>[0-9A-Fa-f]*)\|", m => Colour.Rgb(m.Groups[1].Value));
+			return text;
+		}
 
         public string ToCode()
         {

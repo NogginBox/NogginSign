@@ -1,4 +1,4 @@
-using NogginSign.Commands;
+﻿using NogginSign.Commands;
 using NogginSign.Exceptions;
 using System;
 using System.Diagnostics.Contracts;
@@ -34,7 +34,7 @@ namespace NogginSign
 				throw new NogginSignConnectionException("No COM Port devices found");
 			}
 
-			_port.PortName = availablePorts[0];
+			_port.PortName = availablePorts[2];
 			_port.BaudRate = 38400;
 			//port.DataBits = 5; // 5 - 8
 			//port.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cboStopBits.Text);

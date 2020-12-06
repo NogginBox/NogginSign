@@ -3,21 +3,21 @@ using System.Text.RegularExpressions;
 
 namespace NogginSign.Constants
 {
-    class Colours
+    class Colour
     {
         // Colours
-        public const string RED       = "\x1C1";
-        public const string GREEN     = "\x1C2";
-        public const string AMBER     = "\x1C3";
-        public const string DIM_RED   = "\x1C4";
-        public const string DIM_GREEN = "\x1C5";
-        public const string BROWN     = "\x1C6";
-        public const string ORANGE    = "\x1C7";
-        public const string YELLOW    = "\x1C8";
-        public const string RAINBOW_1 = "\x1C9";
-        public const string RAINBOW_2 = "\x1CA";
-        public const string COLOR_MIX = "\x1CB";
-        public const string AUTOCOLOR = "\x1CC";
+        public const string Red       = "\x1C1";
+        public const string Green     = "\x1C2";
+        public const string Amber     = "\x1C3";
+        public const string DimRed   = "\x1C4";
+        public const string DimGreen = "\x1C5";
+        public const string Brown     = "\x1C6";
+        public const string Orange    = "\x1C7";
+        public const string Yellow    = "\x1C8";
+        public const string Rainbow1 = "\x1C9";
+        public const string Rainbow2 = "\x1CA";
+        public const string ColourMix = "\x1CB";
+        public const string AutoColour = "\x1CC";
 
         /// <summary>
         /// Create color constant for use in TEXT and STRING files.
@@ -26,7 +26,7 @@ namespace NogginSign.Constants
         public static string Rgb(string rgb)
         {
             CheckValidRgg(rgb);
-            return $"\x1CZ{rgb}";
+			return DimGreen; //$"\x1CZ{rgb}";
         }
 
         /// <summary>
